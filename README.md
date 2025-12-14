@@ -65,8 +65,8 @@ Then open `http://localhost:8000/index.html` in your browser.
 - Example: `0624446`, `1234567`, `0001234`
 
 ### 2. **Select Draw**
-- Choose from available draw options
-- Links to official PDF documents are automatically processed
+- Choose from available draw options (Or User uploaded PDF draw result)
+- Links to official PDF documents (User uploaded PDF draw result) are automatically processed
 - CORS proxy services handle cross-origin PDF access
 
 ### 3. **Check Tickets**
@@ -239,7 +239,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### Development Setup
+### Development Setup (Currently Private)
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
