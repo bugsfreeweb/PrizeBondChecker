@@ -6,10 +6,13 @@ A professional web application for checking Bangladesh Prize Bond tickets agains
 ![Version](https://img.shields.io/badge/Version-2.0.0-blue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
-## 🔗 Live/Online
-<a href="https://prizebondbd.netlify.app" target="_blank" rel="noopener noreferrer">Prize Bond Checker</a>
-or,
-<a href="https://pbchecker.netlify.app" target="_blank" rel="noopener noreferrer">Prize Bond Checker</a>
+
+## 🔗 Live Demo
+
+Visit the live application:
+- **Primary and Main V-2.0**: [https://prizebondbd.netlify.app](https://prizebondbd.netlify.app)
+- **Secondary V-1.0**: [https://pbchecker.netlify.app](https://pbchecker.netlify.app)
+
 ## 🌟 Features
 
 ### ✅ **Core Functionality**
@@ -18,6 +21,7 @@ or,
 - **CORS Proxy Support**: Multiple proxy services for accessing external PDF documents
 - **Multi-language Support**: Bengali and English numeral conversion
 - **Priority-based Tier Assignment**: Accurate prize tier determination
+- **Firebase Authentication**: Secure Google Sign-In integration
 
 ### 📊 **Advanced Analytics**
 - **Real-time Statistics**: Total checks, winners, prize amounts, and win rates
@@ -31,6 +35,7 @@ or,
 - **Dark/Light Theme**: User preference-based theme switching
 - **Offline Capability**: Local storage for ticket sets and check history
 - **Winner Celebrations**: Animated notifications for winning tickets
+- **Bangladesh Flag Theme**: Beautiful flag-inspired design elements
 
 ### 🔧 **Technical Features**
 - **PDF.js Integration**: Advanced PDF text extraction and processing
@@ -38,16 +43,21 @@ or,
 - **Progressive Web App**: Fast loading and offline functionality
 - **Error Handling**: Graceful degradation with user-friendly messages
 - **Data Persistence**: Local storage with backup capabilities
+- **Firebase Integration**: Secure user authentication and data sync
 
 ## 🚀 Quick Start
 
-### Option 1: Direct Usage (Under Development)
-1. Download the `zip` file
-2. Open it in any modern web browser
+### Option 1: Direct Usage
+1. Visit the live demo links above
+2. Sign in with your Google account
 3. Start checking your prize bond tickets!
 
-### Option 2: Local Server
+### Option 2: Local Development (Still Under development)
 ```bash
+# Clone or download the project
+# Navigate to the project directory
+cd prize-bond-checker
+
 # Using Python
 python -m http.server 8000
 
@@ -58,34 +68,40 @@ npx serve .
 php -S localhost:8000
 ```
 
-Then open `http://localhost:8000/index.html` in your browser.
+Then open `http://localhost:8000` in your browser.
 
 ## 📱 How to Use
 
-### 1. **Enter Ticket Numbers**
+### 1. **Authentication**
+- Click "Sign In Securely" with your Google account
+- Secure authentication prevents spam and protects user data
+
+### 2. **Enter Ticket Numbers**
 - Input your prize bond ticket numbers (one per line)
 - Supports 7-10 digit formats with leading zeros
 - Example: `0624446`, `1234567`, `0001234`
+- Use the "Save Tickets" option to store commonly used numbers
 
-### 2. **Select Draw**
-- Choose from available draw options (Or User uploaded PDF draw result)
-- Links to official PDF documents (User uploaded PDF draw result) are automatically processed
-- CORS proxy services handle cross-origin PDF access
+### 3. **Select Draw**
+- Choose from available draw options
+- Upload your own PDF draw results for custom checking
+- The app automatically processes official PDF documents
 
-### 3. **Check Tickets**
+### 4. **Check Tickets**
 - Click "Check Tickets" for single draw verification
 - Use "Check All" to verify against multiple draws
 - Real-time progress indicators show processing status
 
-### 4. **View Results**
+### 5. **View Results**
 - Detailed results with prize amounts and tiers
 - Winner notifications with celebration animations
 - Analytics dashboard with comprehensive statistics
 
-### 5. **Save & Export**
+### 6. **Manage Data**
 - Save ticket sets for quick reuse
 - Export data for backup and sharing
 - Import previously saved data
+- Clear history when needed
 
 ## 🎯 Prize Structure
 
@@ -103,11 +119,11 @@ The application supports the standard Bangladesh Prize Bond structure:
 
 ### Frontend Technologies
 - **HTML5**: Modern semantic markup
-- **CSS3**: Custom properties, Grid, Flexbox
-- **JavaScript (ES6+)**: Modern JavaScript features
+- **CSS3**: Custom properties, Grid, Flexbox, CSS Variables
+- **JavaScript (ES6+)**: Modern JavaScript features and Firebase SDK
 - **PDF.js**: Client-side PDF processing
 - **Font Awesome**: Professional icons
-- **Google Fonts**: Typography (Inter, Plus Jakarta Sans)
+- **Google Fonts**: Typography (Inter, Plus Jakarta Sans, JetBrains Mono)
 
 ### Key Components
 - **PDF Processor**: Text extraction from official PDF documents
@@ -116,6 +132,7 @@ The application supports the standard Bangladesh Prize Bond structure:
 - **Data Manager**: Local storage with backup capabilities
 - **Progress System**: Smooth animated feedback
 - **CORS Proxy Handler**: Multiple proxy service fallbacks
+- **Firebase Auth**: Secure user authentication system
 
 ### Browser Support
 - ✅ Chrome 80+
@@ -124,71 +141,36 @@ The application supports the standard Bangladesh Prize Bond structure:
 - ✅ Edge 80+
 - ✅ Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 🛠️ Configuration
+## 🎨 Design Features
 
-### PDF URL Configuration
-To add new draw PDFs, modify the draw selection options in the HTML:
+### Bangladesh Flag Theme
+- **Green Background**: Represents the green field of Bangladesh flag
+- **Red Circular Card**: Represents the red circle of the flag
+- **Professional Typography**: Clean, readable fonts for optimal user experience
+- **Responsive Layout**: Adapts beautifully to all screen sizes
 
-```javascript
-const drawOptions = [
-    {
-        value: "https://official-pdf-url.com| Draw Name|2025-01-01",
-        textContent: "January 2025 Draw Results"
-    }
-    // Add more draws here
-];
-```
+### User Interface
+- **Splash Screen**: Animated loading with brand logo
+- **Login Screen**: Secure Google authentication with flag theme
+- **Dashboard**: Clean, organized layout with statistics cards
+- **Sidebar Navigation**: Easy access to all application sections
+- **Results Display**: Clear, detailed results with winner highlights
 
-### CORS Proxy Services
-The application includes multiple CORS proxy services for PDF access:
-- allorigins.win
-- corsproxy.io
-- codetabs.com
-- cors-anywhere.herokuapp.com
+## 🔒 Security & Privacy
 
-## 📊 Analytics & Reporting
+### Data Handling
+- All data stored locally in browser
+- No server-side data transmission of user tickets
+- User data never leaves the device
+- PDF processing happens client-side
+- Firebase authentication for secure access
 
-### Dashboard Statistics
-- **Total Checks**: Number of tickets verified
-- **Winning Tickets**: Count of winning tickets
-- **Total Prize Won**: Sum of all prize amounts
-- **Win Rate**: Percentage of winning tickets
-
-### Historical Data
-- Complete check history with timestamps
-- Detailed results for each check session
-- Prize distribution analysis
-- Performance trends over time
-
-### Export Features
-- JSON export for all data
-- CSV export for ticket lists
-- Backup/restore functionality
-- Data migration tools
-
-## 🎨 Customization
-
-### Theme Customization
-The application uses CSS custom properties for easy theming:
-
-```css
-:root {
-    --primary-500: #10b981;
-    --primary-600: #059669;
-    --success-500: #10b981;
-    --bg-card: #ffffff;
-    --text-primary: #1f2937;
-}
-```
-
-### Progress Colors
-Customize the progress indicator colors in the CSS:
-
-```css
-.progress-fill {
-    background: linear-gradient(90deg, #10b981, #059669, #047857);
-}
-```
+### Privacy Features
+- No tracking or analytics
+- No external API calls for user data
+- Offline-first architecture
+- Secure Google Sign-In integration
+- Local storage with user control
 
 ## 🐛 Troubleshooting
 
@@ -198,11 +180,19 @@ Customize the progress indicator colors in the CSS:
 - Check internet connection
 - Verify PDF URL accessibility
 - Try manual PDF upload if CORS blocked
+- The app automatically tries multiple proxy services
+
+**Authentication Issues**
+- Ensure Google account is available
+- Check browser permissions for popups
+- Try refreshing the page
+- Clear browser cache if needed
 
 **Tickets Not Found**
 - Ensure ticket numbers are 7-10 digits
 - Check for leading zeros (use full format)
 - Verify ticket is from the correct draw
+- Ensure PDF contains the correct draw data
 
 **CORS Errors**
 - The app automatically tries multiple proxy services
@@ -219,20 +209,8 @@ Open browser console (F12) to view detailed processing logs and error messages.
 - **Efficient Storage**: Optimized localStorage usage
 - **Smooth Animations**: 60fps CSS animations
 - **Responsive Design**: Optimized for all screen sizes
-
-## 🔒 Security & Privacy
-
-### Data Handling
-- All data stored locally in browser
-- No server-side data transmission
-- User data never leaves the device
-- PDF processing happens client-side
-
-### Privacy Features
-- No tracking or analytics
-- No external API calls for user data
-- Offline-first architecture
-- Local storage encryption support
+- **Progressive Loading**: Content loads as needed
+- **Caching**: Intelligent caching of processed data
 
 ## 📝 License
 
@@ -242,7 +220,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### Development Setup (Currently Private)
+### Development Setup
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
@@ -251,15 +229,17 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 📞 Support
 
-### Documentation
-- [User Guide](docs/user-guide.md)
-- [API Reference](docs/api-reference.md)
-- [Troubleshooting Guide](docs/troubleshooting.md)
+### Getting Help
+- **Issues**: Report bugs and request features on GitHub
+- **Documentation**: Check this README for common solutions
+- **Community**: Join discussions for community support
 
-### Community
-- **Issues**: Report bugs and request features
-- **Discussions**: Community support and questions
-- **Wiki**: Additional documentation and examples
+### Feature Requests
+We welcome feature requests! Please:
+1. Check existing issues first
+2. Describe the feature clearly
+3. Explain the use case
+4. Provide mockups if applicable
 
 ## 🙏 Acknowledgments
 
@@ -267,7 +247,29 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - **Font Awesome**: For the comprehensive icon set
 - **Google Fonts**: For beautiful typography
 - **Bangladesh Bank**: For official prize bond information
+- **Firebase**: For secure authentication services
 - **Community Contributors**: For feedback and suggestions
+
+## 🏗️ Development
+
+### Setup Development Environment
+```bash
+# Install dependencies (if any)
+npm install
+
+# Start development server
+npm start
+
+# Build for production
+npm run build
+```
+
+### Code Style
+- Use modern JavaScript (ES6+)
+- Follow semantic HTML5 markup
+- Use CSS custom properties for theming
+- Maintain responsive design principles
+- Add comments for complex logic
 
 ## 📊 Project Stats
 
@@ -276,8 +278,27 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 ![GitHub issues](https://img.shields.io/github/issues/username/prize-bond-checker)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/username/prize-bond-checker)
 
+## 🔄 Changelog
+
+### Version 2.0.0 (Current)
+- ✨ Added Firebase Google Authentication
+- 🎨 Bangladesh flag-themed login interface
+- 📱 Enhanced mobile responsiveness
+- 🔧 Fixed PDF progress modal functionality
+- 🎯 Improved user experience flow
+- 📊 Enhanced analytics dashboard
+- 🔒 Added secure logout functionality
+
+### Version 1.x
+- Basic ticket checking functionality
+- PDF processing capabilities
+- Local data storage
+- Responsive design
+
 ---
 
 **Made with ❤️ for the Bangladesh Prize Bond community**
 
-*Last updated: December 2025*
+*Built with Passion • Powered by Open Source*
+
+*Last updated: December 15, 2025*
