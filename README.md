@@ -6,7 +6,8 @@ A professional web application for checking Bangladesh Prize Bond tickets agains
 ![Version](https://img.shields.io/badge/Version-2.0.0-blue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
-
+## 🔗 Live/Online
+<a href="https://prizebondbd.netlify.app" target="_blank" rel="noopener noreferrer">Prize Bond Checker</a>
 ## 🌟 Features
 
 ### ✅ **Core Functionality**
