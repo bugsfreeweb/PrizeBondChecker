@@ -13,6 +13,8 @@ Visit the live application:
 - **Primary and Main V-2.0**: [https://prizebondbd.netlify.app](https://prizebondbd.netlify.app)
 - **Secondary V-1.0**: [https://pbchecker.netlify.app](https://pbchecker.netlify.app)
 
+![Prize Bond Preview](https://github.com/bugsfreeweb/PrizeBondChecker/blob/main/assets/screenshot_auth.png?raw=true)
+
 ## 🌟 Features
 
 ### ✅ **Core Functionality**
