@@ -275,10 +275,10 @@ npm run build
 
 ## 📊 Project Stats
 
-![GitHub stars](https://img.shields.io/github/stars/username/prize-bond-checker)
-![GitHub forks](https://img.shields.io/github/forks/username/prize-bond-checker)
-![GitHub issues](https://img.shields.io/github/issues/username/prize-bond-checker)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/username/prize-bond-checker)
+![GitHub stars](https://img.shields.io/github/stars/bugsfreeweb/PrizeBondChecker)
+![GitHub forks](https://img.shields.io/github/forks/bugsfreeweb/PrizeBondChecker)
+![GitHub issues](https://img.shields.io/github/issues/bugsfreeweb/PrizeBondChecker)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/bugsfreeweb/PrizeBondChecker)
 
 ## 🔄 Changelog
 
